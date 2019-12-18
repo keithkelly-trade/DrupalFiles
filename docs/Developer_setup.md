@@ -32,7 +32,7 @@ Download, install and configure
      New-Item C:\ProgramData\PuppetLabs\puppet\ssl\certs  -ItemType Directory
      ```
 
-- Download PuppetMaster ca.pem from psc-pupmaster01-vm.ad.he-equipment.com in /opt/puppetlabs/puppet/ssl/certs/ca.pem
+- Download PuppetMaster ca.pem from \<PuppetMaster Host\> in /opt/puppetlabs/puppet/ssl/certs/ca.pem
   This may require assistance from the team or someone on the team should have this file.
 
 - Copy ca.pem to C:\ProgramData\PuppetLabs\puppet\ssl\certs
@@ -49,7 +49,7 @@ Download, install and configure
 - Create File ~\.puppetlabs\client-tools\puppet-access.conf with the content:
 ```
 {
-  "service-url": "https://psc-pupmaster01-vm.ad.he-equipment.com:4433/rbac-api",
+  "service-url": "https://\<PuppetMaster Host\>:4433/rbac-api",
   "cacert": "C:\\ProgramData\\PuppetLabs\\puppet\\ssl\\certs\\ca.pem"
 }
 ```
@@ -58,7 +58,7 @@ Download, install and configure
 ```
 {
   "cacert": "C:\\ProgramData\\PuppetLabs\\puppet\\ssl\\certs\\ca.pem",
-  "service-url": "https://psc-pupmaster01-vm.ad.he-equipment.com:8170/code-manager"
+  "service-url": "https://\<PuppetMaster Host\>:8170/code-manager"
 }
 ```
 
@@ -71,7 +71,7 @@ puppet-code config-print
 
 It should look something like:
 ```
-service-url: "https://psc-pupmaster01-vm.ad.he-equipment.com:8170/code-manager"
+service-url: "https://\<PuppetMaster Host\>:8170/code-manager"
 cacert: "C:\ProgramData\PuppetLabs\puppet\ssl\certs\ca.pem"
 token-file: "C:\Users\troklein\.puppetlabs\token"
 token: "AOerU........REDACTED"
