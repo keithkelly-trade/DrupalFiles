@@ -23,3 +23,14 @@ mod 'puppet-windowsfeature',             '3.2.2'
 mod 'puppet-sslcertificate',             '3.4.0'
 mod 'puppetlabs-powershell',             '2.3.0'
 mod 'puppet-windows_firewall',           '2.0.2'
+
+# This module is to allow for no action just reporting in profile::os::windows::security
+mod 'trlinkin-noop',                     '1.0.1'
+
+# These modules are needed to support secure_windows
+#mod 'ayohrling-local_security_policy',   '0.6.3'
+#mod 'jonono-auditpol',                   '0.1.2'
+#mod 'fervid-applocker',                  '1.0.0'
+#mod 'ipcrm-registry_acl',                '0.0.6'
+#mod 'fervid-ad_acl',                     '1.0.0'
+#mod 'fervid-secure_windows',             '1.0.10'
