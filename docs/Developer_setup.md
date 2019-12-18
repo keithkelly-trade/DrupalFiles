@@ -8,6 +8,10 @@ Download and install Puppet Developers Kit:
 
 [PDK](https://puppet.com/download-puppet-development-kit)
 
+Download and install Git
+
+[Git Download](https://git-scm.com/downloads)
+
 Download and install Visual Studio Code:
 
 [Visual Studio Code](https://code.visualstudio.com/)
@@ -72,6 +76,9 @@ cacert: "C:\ProgramData\PuppetLabs\puppet\ssl\certs\ca.pem"
 token-file: "C:\Users\troklein\.puppetlabs\token"
 token: "AOerU........REDACTED"
 ```
+### Git
+
+- Download and install https://git-scm.com/downloads
 
 ### Visual Studio Code (VSC)
 
