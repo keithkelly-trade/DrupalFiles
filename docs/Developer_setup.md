@@ -37,7 +37,7 @@ Download, install and configure
 
 - Copy ca.pem to C:\ProgramData\PuppetLabs\puppet\ssl\certs
 
-- On the workstation, make sure the file permissions are set to read-only for `C:\ProgramData\PuppetLabs\puppet\etc\ssl\certs\ca.pem`
+- On the workstation, make sure the file permissions are set to read-only for `C:\ProgramData\PuppetLabs\puppet\ssl\certs\ca.pem`
 
     -  Example in Powershell:
     ```
