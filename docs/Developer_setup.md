@@ -107,4 +107,11 @@ token: "AOerU........REDACTED"
 
   - When it is complete you should see a Puppet version.
 
+### Notes for PowerShell Environment
+
+Add the following to 'C:\Users\<USERNAME>\Documents\WindowsPowerShell\profile.ps1'
+
+```
+$env:Path += "C:\Program Files\Puppet Labs\Client\bin;C:\Program Files\Puppet Labs\DevelopmentKit\bin"
+```
 
