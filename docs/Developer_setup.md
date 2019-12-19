@@ -62,6 +62,14 @@ Download, install and configure
 }
 ```
 
+Notes for PowerShell Environment
+
+Add the following to 'C:\Users\<USERNAME>\Documents\WindowsPowerShell\profile.ps1'
+
+```
+$env:Path += ";C:\Program Files\Puppet Labs\Client\bin;C:\Program Files\Puppet Labs\DevelopmentKit\bin"
+```
+
 In an Admin Powershell:
 ```
 puppet-access login --lifetime 90d
@@ -106,12 +114,4 @@ token: "AOerU........REDACTED"
   - In the bottom left of the VSC pane you should see `Starting Puppet...` if you have a `.pp` file open in a active edit window.
 
   - When it is complete you should see a Puppet version.
-
-### Notes for PowerShell Environment
-
-Add the following to 'C:\Users\<USERNAME>\Documents\WindowsPowerShell\profile.ps1'
-
-```
-$env:Path += "C:\Program Files\Puppet Labs\Client\bin;C:\Program Files\Puppet Labs\DevelopmentKit\bin"
-```
 
