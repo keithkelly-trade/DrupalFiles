@@ -22,6 +22,7 @@ mod 'puppet-windowsfeature',             '3.2.2'
 mod 'puppet-sslcertificate',             '3.4.0'
 mod 'puppetlabs-powershell',             '2.3.0'
 mod 'puppet-windows_firewall',           '2.0.2'
+mod 'puppetlabs-translate',              '2.1.0'
 
 # This module is to allow for no action just reporting in profile::os::windows::security
 mod 'trlinkin-noop',                     '1.0.1'
