@@ -10,38 +10,38 @@ class profile::os::baseline (
   # configuration for systems to be used within the company networks.
   case $facts['os']['family'] {
     'RedHat','Debian': {
-      class { 'profile::os::baseline::dns_resolver':
-        name_servers => $name_servers,
-        search_path  => $search_path,
-      }
-      include 'profile::os::linux::security'
+#      class { 'profile::os::baseline::dns_resolver':
+#        name_servers => $name_servers,
+#        search_path  => $search_path,
+#      }
+#      include 'profile::os::linux::security'
     }
     'windows': {
-      class { 'profile::os::baseline::dns_resolver':
-        name_servers => $name_servers,
-        search_path  => $search_path,
-      }
-      include profile::os::windows::security
+#      class { 'profile::os::baseline::dns_resolver':
+#        name_servers => $name_servers,
+#        search_path  => $search_path,
+#      }
+#      include profile::os::windows::security
     }
-    'Solaris': {
-      class { 'profile::os::baseline::dns_resolver':
-        name_servers => $name_servers,
-        search_path  => $search_path,
-      }
-      include profile::os::solaris::enable_ssh
-    }
+#    'Solaris': {
+#      class { 'profile::os::baseline::dns_resolver':
+#        name_servers => $name_servers,
+#        search_path  => $search_path,
+#      }
+#      include profile::os::solaris::enable_ssh
+#    }
     default: {
       fail("OS family ${facts['os']['family']} is not supported with ${title}.")
     }
   }
   # Profile does the OS case statement 
   # Profile will normalize the 'temp' path for Linux, Solaris, and Windows
-  include profile::os::baseline::archives
-  # Profile does motd and banner
-  include profile::os::baseline::banner
-  # Profile validates trusted.extensions are set
-  $extensions = lookup('profile::os::baseline::verify_trusted_data::extentions', Array,  'deep')
-  class { 'profile::os::baseline::verify_trusted_data':
-    extensions_to_check => $extensions,
-  }
+#  include profile::os::baseline::archives
+#  # Profile does motd and banner
+#  include profile::os::baseline::banner
+#  # Profile validates trusted.extensions are set
+# $extensions = lookup('profile::os::baseline::verify_trusted_data::extentions', Array,  'deep')
+#  class { 'profile::os::baseline::verify_trusted_data':
+#    extensions_to_check => $extensions,
+#  }
 }
