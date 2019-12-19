@@ -38,7 +38,7 @@ class profile::os::baseline (
   # Profile will normalize the 'temp' path for Linux, Solaris, and Windows
 #  include profile::os::baseline::archives
 #  # Profile does motd and banner
-#  include profile::os::baseline::banner
+include profile::os::baseline::banner
 #  # Profile validates trusted.extensions are set
 # $extensions = lookup('profile::os::baseline::verify_trusted_data::extentions', Array,  'deep')
 #  class { 'profile::os::baseline::verify_trusted_data':

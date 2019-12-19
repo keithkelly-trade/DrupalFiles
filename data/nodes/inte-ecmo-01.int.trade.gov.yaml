@@ -1,0 +1,2 @@
+---
+  profile::os::baseline::banner::motd: 'This is a test.'
