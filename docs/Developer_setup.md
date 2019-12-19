@@ -66,7 +66,10 @@ In an Admin Powershell:
 ```
 puppet-access login --lifetime 90d
 ###  provide user and password for Puppet Enterprise Console
-puppet-code config-print
+puppet-code print-config
+### Test deploying the code
+#puppet-code deploy <environment> --wait
+puppet-code deploy production --wait
 ```
 
 It should look something like:
