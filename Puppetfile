@@ -14,6 +14,8 @@ mod 'puppetlabs-dsc_lite',               '3.0.0'
 mod 'puppetlabs-pwshlib',                '0.3.0'
 mod 'puppetlabs-reboot',                 '2.3.0'
 mod 'puppet-windows_env',                '3.2.0'
+# TBR, 121919 Thu - Adding motd module
+mod 'puppetlabs-motd',                   '4.0.0'
 
 # These modules are to assist in securing the os's
 mod 'puppetlabs-acl',                    '2.1.0'
