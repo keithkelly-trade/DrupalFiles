@@ -9,7 +9,6 @@ mod 'puppetlabs-iis',                    '4.5.0'
 mod 'puppet-archive',                    '3.2.1'
 mod 'puppet-hiera',                      '3.3.4'
 mod 'puppetlabs-concat',                 '4.2.1'
-mod 'puppetlabs-motd',                   '3.1.0'
 
 mod 'puppetlabs-dsc_lite',               '3.0.0'
 mod 'puppetlabs-pwshlib',                '0.3.0'
