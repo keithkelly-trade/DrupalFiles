@@ -1,0 +1,3 @@
+service { 'snmp':
+    ensure => running,
+}
