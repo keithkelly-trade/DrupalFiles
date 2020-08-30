@@ -223,14 +223,15 @@ class profile::os::windows::os_baseline_win2016dc {
   }
 
   # SERVICE: Puppet Agent
-  service { 'puppet' :
-    ensure => running,
-  }
+  #service { 'puppet' :
+  #  ensure => running,
+  #}
 
+  # CANNOT BE REDECLARED
   # SERVICE: Puppet PXP Agent
-  service { 'pxp-agent' :
-    ensure => running,
-  }
+  #service { 'pxp-agent' :
+  #  ensure => running,
+  #}
 
   # SERVICE: Remote Desktop Configuration
   service { 'SessionEnv' :
