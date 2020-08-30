@@ -383,10 +383,11 @@ class profile::os::windows::os_baseline_win2016dc {
     ensure => running,
   }
 
+  # CANNOT BE REDECLARED
   # SERVICE: Windows Firewall
-  service { 'MpsSvc' :
-    ensure => running,
-  }
+  #service { 'MpsSvc' :
+  #  ensure => running,
+  #}
 
   # SERVICE: Windows Font Cache Service
   service { 'FontCache' :
