@@ -1,5 +1,5 @@
 # This profile an example of base profile.
-# It should support all site OS's and sould be enforced
+# It should support all site OS's and should be enforced
 # on all agent hosts.  This is the minimum bar of site
 # specific hosts.
 class profile::os::baseline (

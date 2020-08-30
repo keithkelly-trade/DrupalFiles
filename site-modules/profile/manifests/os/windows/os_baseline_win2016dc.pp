@@ -6,7 +6,6 @@ class profile::os::windows::os_baseline_win2016dc {
   }
 
   ###  SECTION: LOCAL FIREWALL - START
-
   # INBOUND RULE:  BES Client
   # REQUIRED FOR:  BigFix Client
   windows_firewall::exception { 'BES Client' :
@@ -19,7 +18,6 @@ class profile::os::windows::os_baseline_win2016dc {
     remote_port => 'any',
     display_name => 'BES Client'
   }
-
   ###  SECTION: LOCAL FIREWALL - END
 
 

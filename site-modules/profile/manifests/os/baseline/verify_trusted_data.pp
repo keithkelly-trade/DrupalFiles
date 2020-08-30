@@ -1,6 +1,6 @@
 # profile::base::chk_facts_exist
 #
-# This class to to check and see if required facts are set.
+# This class is to check and see if required facts are set.
 # The list of facts can be placed in hiera or can be set
 # when the class is called (param)
 #
