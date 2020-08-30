@@ -1,5 +1,5 @@
 class profile::os::windows::os_baseline_win2016dc {
-  
+
   # Declare 'windows_firewall' resource
   class { 'windows_firewall' :
     ensure => running,
@@ -15,8 +15,8 @@ class profile::os::windows::os_baseline_win2016dc {
     action => 'allow',
     enabled => true,
     protocol => 'any',
-    local port => 'any',
-    remote port => 'any',
+    local_port => 'any',
+    remote_port => 'any',
     display_name => 'BES Client'
   }
 
@@ -123,7 +123,7 @@ class profile::os::windows::os_baseline_win2016dc {
   service { 'DFSR' :
     ensure => running,
   }
-  
+
   # SERVICE: DHCP Client
   service { 'Dhcp' :
     ensure => running,
