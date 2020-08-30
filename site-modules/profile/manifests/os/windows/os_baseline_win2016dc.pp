@@ -9,14 +9,14 @@ class profile::os::windows::os_baseline_win2016dc {
   # INBOUND RULE:  BES Client
   # REQUIRED FOR:  BigFix Client
   windows_firewall::exception { 'BES Client' :
-    ensure => present,
-    direction => 'in',
-    action => 'allow',
+    #ensure => present,
+    #direction => 'in',
+    #action => 'allow',
     enabled => true,
-    protocol => 'TCP',
-    local_port => 'any',
-    remote_port => 'any',
-    display_name => 'BES Client'
+    #protocol => 'TCP',
+    #local_port => 'any',
+    #remote_port => 'any',
+    #display_name => 'BES Client'
   }
   ###  SECTION: LOCAL FIREWALL - END
 
