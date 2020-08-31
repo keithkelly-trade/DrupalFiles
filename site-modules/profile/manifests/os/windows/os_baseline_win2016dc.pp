@@ -5,9 +5,11 @@ class profile::os::windows::os_baseline_win2016dc {
     ensure => running,
   }
 
+
   ###  SECTION: LOCAL FIREWALL - START
+  
   # INBOUND RULE:  BES Client
-  # REQUIRED FOR:  BigFix Client
+  # REQUIRED FOR:  BigFix
   windows_firewall::exception { 'BES Client' :
     ensure => present,
     direction => 'in',
@@ -16,17 +18,26 @@ class profile::os::windows::os_baseline_win2016dc {
     protocol => 'TCP',
     local_port => 'any',
     remote_port => 'any',
-    display_name => 'BES Client'
+    display_name => 'BES Client',
   }
+  
   ###  SECTION: LOCAL FIREWALL - END
 
 
-  ###  SECTION: REGISTRY - START
+  ###  SECTION: WIN 2016 STIG REQUIREMENTS - START
+ 
+  registry::value { 'NetBIOS node type':
+    key   => 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters',
+    value => 'NodeType',
+    data  => '2',
+    type  => 'dword',
+  }
 
-  ###  SECTION: REGISTRY - END
+  ###  SECTION: WIN 2016 STIG REQUIREMENTS - END
 
 
   ###  SECTION: SERVICES - START
+
   # SERVICE: Amazon SSM Agent
   service { 'AmazonSSMAgent' :
     ensure => running,
@@ -393,6 +404,7 @@ class profile::os::windows::os_baseline_win2016dc {
   service { 'FontCache' :
     ensure => running,
   }
+
   ###  SECTION: SERVICES - END
 
 }
