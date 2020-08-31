@@ -26,10 +26,23 @@ class profile::os::windows::os_baseline_win2016dc {
 
   ###  SECTION: WIN 2016 STIG REQUIREMENTS - START
  
-  registry::value { 'NetBIOS node type':
+  registry::value { 'Network access: Restrict clients allowed to make remote calls to SAM' :
+    key   => 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa',
+    value => 'RestrictRemoteSam',
+    data  => 'o:bag:bad:(a;;rc;;;ba)',
+  }
+
+  registry::value { 'NetBIOS node type' :
     key   => 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters',
     value => 'NodeType',
     data  => '2',
+    type  => 'dword',
+  }
+
+  registry::value { 'Continue experiences on this device' :
+    key   => 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\System',
+    value => 'EnableCdp',
+    data  => '1',
     type  => 'dword',
   }
 
